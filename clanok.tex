@@ -3,6 +3,7 @@
 \documentclass[10pt,twoside,slovak,a4paper]{article}
 
 \usepackage[slovak]{babel}
+\usepackage{pdfpages}
 %\usepackage[T1]{fontenc}
 \usepackage[IL2]{fontenc} % lepšia sadzba písmena Ľ než v T1
 \usepackage[utf8]{inputenc}
@@ -15,15 +16,16 @@
 
 \pagestyle{headings}
 
-\title{Názov\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2021/22, vedenie: Meno Priezvisko}} % meno a priezvisko vyučujúceho na cvičeniach
+\title{Tvorba SW pomocou umelej inteligencie
+\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2021/22, vedenie: Ing. Vladimír Mlynarovič}} % meno a priezvisko vyučujúceho na cvičeniach
 
-\author{Ľubomír Novontý\\[2pt]
+\author{Ľubomír Novotný\\[2pt]
 	{\small Slovenská technická univerzita v Bratislave}\\
 	{\small Fakulta informatiky a informačných technológií}\\
-	{\small \texttt{...@stuba.sk}}
+	{\small \texttt{xnovotnyl1@stuba.sk}}
 	}
 
-\date{\small 1. november 2021} % upravte
+\date{\small 1. oktober 2021} % upravte
 
 
 
@@ -32,44 +34,35 @@
 \maketitle
 
 \begin{abstract}
-\ldots
+Zaoberáme sa implementáciou umelej inteligencie pri tvorbe a testovaní SW a hlavne GUI. Použitie umelej inteligencie pri vývoji SW a GUI ma viacero výhod. Umelá inteligencia dokáže optimalizovať a zrýchliť, zlacniť, uľahčiť a zautomatizovať  testovanie a tvorbu SW a GUI. Použitie umelej inteligencie pri tvorbe SW ma taktiež nevýhody. Nedokáže nahradiť manuálne testovanie, závislé od kvality AI, AI nemá imagináciu a preto nedokáže hľadať chyby ako človek. Umelú inteligenciu môžeme zakomponovať aj do samotných aplikácií a programov pomocou ktorých SW tvoríme. Umelá inteligencia taktiež môže byť použitá na vytvorenie veľkého množstva modelov GUI, ktoré ďalšia umelá inteligencia simulovaného používateľa porovná.
 \end{abstract}
-
-
 
 \section{Úvod}
 
-Motivujte čitateľa a vysvetlite, o čom píšete. Úvod sa väčšinou nedelí na časti.
+Pri tvorbe softvéru je nápomocné používať nástroje ktoré používajú umelú inteligenciu (AI). Softvérové inžinierstvo ako činnosť je vysvetlené v časti~\ref{SWE}. Umelá inteligencia je priblížená v časti~\ref{AI}. Programy a spôsob použitia AI je ukázaný v časti~\ref{pouzitie AI pri S}. Záverečné poznámky záver je v časti~\ref{zaver}.
 
-Uveďte explicitne štruktúru článku. Tu je nejaký príklad.
-Základný problém, ktorý bol naznačený v úvode, je podrobnejšie vysvetlený v časti~\ref{nejaka}.
-Dôležité súvislosti sú uvedené v častiach~\ref{dolezita} a~\ref{dolezitejsia}.
-Záverečné poznámky prináša časť~\ref{zaver}.
+\section{Softvérové inžinierstvo} \label{SWE}
 
+\includegraphics[scale=0.6]{vodopad1}
 
+%\includegraphics{vodopad} 
+ 
+Obr.~\ref{f:rozhod} Vodopádový model tvorby softvéru.
 
-\section{Nejaká časť} \label{nejaka}
-
-Z obr.~\ref{f:rozhod} je všetko jasné. 
-
-\begin{figure*}[tbh]
 \centering
-%\includegraphics[scale=1.0]{diagram.pdf}
+\begin{figure*}[tbh]
 Aj text môže byť prezentovaný ako obrázok. Stane sa z neho označný plávajúci objekt. Po vytvorení diagramu zrušte znak \texttt{\%} pred príkazom \verb|\includegraphics| označte tento riadok ako komentár (tiež pomocou znaku \texttt{\%}).
 \caption{Rozhodujúci argument.}
 \label{f:rozhod}
 \end{figure*}
 
+\subsection{Testovanie softvéru} \label{testovanie}
 
-
-\section{Iná časť} \label{ina}
-
-Základným problémom je teda\ldots{} Najprv sa pozrieme na nejaké vysvetlenie (časť~\ref{ina:nejake}), a potom na ešte nejaké (časť~\ref{ina:nejake}).\footnote{Niekedy môžete potrebovať aj poznámku pod čiarou.}
+Základným problémom je teda\ldots{} Najprv sa pozrieme na nejaké vysvetlenie (časť~\ref{ina:nejake}), a potom na ešte nejaké %(časť~\ref{ina:nejake}).\footnote{Niekedy môžete potrebovať aj poznámku pod čiarou.}
 
 Môže sa zdať, že problém vlastne nejestvuje\cite{Coplien:MPD}, ale bolo dokázané, že to tak nie je~\cite{Czarnecki:Staged, Czarnecki:Progress}. Napriek tomu, aj dnes na webe narazíme na všelijaké pochybné názory\cite{PLP-Framework}. Dôležité veci možno \emph{zdôrazniť kurzívou}.
 
-
-\subsection{Nejaké vysvetlenie} \label{ina:nejake}
+\section{Umelá inteligencia}\label{AI}
 
 Niekedy treba uviesť zoznam:
 
@@ -93,32 +86,20 @@ Ten istý zoznam, len číslovaný:
 	\end{enumerate}
 \end{enumerate}
 
-
-\subsection{Ešte nejaké vysvetlenie} \label{ina:este}
+\section{Softvér používajúci umelú inteligenciu} \label{AISW}
 
 \paragraph{Veľmi dôležitá poznámka.}
 Niekedy je potrebné nadpisom označiť odsek. Text pokračuje hneď za nadpisom.
 
+\section{Používanie AI pri tvorbe SW} \label{pouzitie AI pri SW}
 
-
-\section{Dôležitá časť} \label{dolezita}
-
-pomoc
-
-
-\section{Ešte dôležitejšia časť} \label{dolezitejsia}
-
-
-
+\input {texta.tex}
 
 \section{Záver} \label{zaver} % prípadne iný variant názvu
 
-
-
 %\acknowledgement{Ak niekomu chcete poďakovať\ldots}
-
 
 % týmto sa generuje zoznam literatúry z obsahu súboru literatura.bib podľa toho, na čo sa v článku odkazujete
 \bibliography{literatura}
-\bibliographystyle{plain} % prípadne alpha, abbrv alebo hociktorý iný
+\bibliographystyle{plain} 
 \end{document}
