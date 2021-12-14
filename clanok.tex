@@ -25,9 +25,7 @@
 	{\small \texttt{xnovotnyl1@stuba.sk}}
 	}
 
-\date{\small 1. október 2021} % upravte
-
-
+\date{\small 14. december 2021}
 
 \begin{document}
 
@@ -42,9 +40,10 @@
 \section{Úvod}
 
 Umelá inteligencia je nový prelom v oblasti informatiky~\ref{AI}. Umelá inteligencia má veľký vplyv v posledných rokoch na postupy pri riešení problémov, ale aj na naše každodenné životy. AI používa počítače na riešenie inak neriešiteľných problémov a zlepšenie kvality dočasných počítačových systémov. Dôležitou otázkou je, či môžeme priamo použiť AI na problémy softvérového inžinierstva~\ref{SWE}, a či procesy softvérového inžinierstva sú schopné využiť umelú inteligenciu~\ref{pouzitie AI pri SW}.
-Testovanie a podobné aktivity si vyžadujú veľa pozornosti počas celej fázy tvorby softvéru, aby sme mohli vytvoriť požadovaný softvér. Na tento zdĺhavý a komplikovaný problém môžeme použiť umelú inteligenciu.  Umelá inteligencia je schopná vykonávať širokú škálu činností, ktorú by inak nebolo možné naprogramovať konvenčným spôsobom. Testovanie používateľského rozhrania je podobné rôznym iným činnostiam, ktoré sme dokázali vyriešiť pomocou umelej inteligencie. V posledných rokoch boli možnosti umelej inteligencie vyšetrované, a boli použité na automatizáciu testovania softvéru.
+Testovanie~\ref{testovanie} a podobné aktivity si vyžadujú veľa pozornosti počas celej fázy tvorby softvéru, aby sme mohli vytvoriť požadovaný softvér. Na tento zdĺhavý a komplikovaný problém môžeme použiť umelú inteligenciu. Umelá inteligencia je schopná vykonávať širokú škálu činností, ktorú by inak nebolo možné naprogramovať konvenčným spôsobom. Testovanie používateľského rozhrania je podobné rôznym iným činnostiam, ktoré sme dokázali vyriešiť pomocou umelej inteligencie. V posledných rokoch boli možnosti umelej inteligencie vyšetrované, a boli použité na automatizáciu testovania softvéru.
 
 \subsection{Softvérové inžinierstvo} \label{SWE}
+\paragraph{}
  Softvérové inžinierstvo \cite{swemb} sa zaoberá tvorbou softvérových systémov ale aj efektivitou softvérových systémov. Efektivita je dôležitá, pretože v reálnom svete máme na vývoj a údržbu ohraničené zdroje, stanovené požiadavky a časový limit. Preto môžeme povedať, že softvérové inžinierstvo sa zaoberá tvorbou väčších softvérových systémov, čo najefektívnejším spôsobom. Pri tvorbe sa sústreďujeme na tvorbu čo najspoľahlivejšieho softvéru, pričom sa snažíme čo najlepšie využiť schopnosti softvérových inžinierov.
 Tvorbu softvéru môžeme realizovať rôznymi spôsobmi. Všetky procesy tvorby softvéru sa vykonávajú v jednotlivých etapách. Tie môžeme nazvať aj ako životný cyklus softvéru. Poznáme viacero takýchto modelov alebo životných cyklusov, ktorými sa môžeme riadiť pri tvorbe softvéru \cite{swebp}:
 \begin{itemize}
@@ -55,11 +54,12 @@ Tvorbu softvéru môžeme realizovať rôznymi spôsobmi. Všetky procesy tvorby
 \includegraphics[scale=0.4]{vodopad1}
 \end{center}
 \begin{center}
-Obr. 1 Vodopádový model tvorby softvéru podľa \cite{swebp}.
+Obr. 1 Vodopádový model tvorby softvéru, upravený podľa \cite{swebp}.
 \end{center}
 
 
 \subsection{Testovanie softvéru} \label{testovanie}
+\paragraph{}
  Podľa \cite{swemb}: "testovateľnosť je úsilie, ktoré treba vynaložiť na testovanie vlastností výrobku, napr. či vykazuje požadované správanie." Testovanie programu \cite{CSEroadmap} začína už na začiatku vývoja, keď samotní programátori testujú funkčnosť počas programovania. Konečné testovanie časti softvéru, by nemal vykonávať tvorca softvéru, a malo by sa vykonávať systematicky, aby sa testovaním podrobila čo najväčšia časť programu. Testovanie je pomerne zložitá ale dôležitá oblasť, preto sa testovaniu venuje odborník, a nie programátor.
 Pri samotnom procese testovania sa softvéroví inžinieri sústreďujú na celý životný cyklus testovania, ktorý začína testovaním funkcií a končí preberacím testovaním a zahŕňa \cite{testovanie}:
 \begin{itemize}
@@ -69,18 +69,20 @@ Pri samotnom procese testovania sa softvéroví inžinieri sústreďujú na cel�
     \item Validačné testovanie - overovanie splnení špecifických požiadavok určených zákazníkom.
     \item Preberacie testovanie - posledné testovanie pred odovzdaním produktu.
 \end{itemize}
-
 \begin{center}
-   \includegraphics[scale=0.4]{tabulka.png} 
+    Tabuľka č. 1 Rozloženie chýb a ich objavenie podľa \cite{testovanie}.
 \end{center}
 \begin{center}
-    Obr. 2 Tabuľka rozloženia chýb a ich objavenia počas vývoja aplikácie podľa \cite{testovanie}.
+   \includegraphics[scale=0.4]{tabulka.png}
 \end{center}
-
- Chyby môžu vzniknúť v každom štádiu vývoja aplikácie \cite{testovanie}, vrátane testovania. Vodopádový spôsob vývoja softvéru \cite{CSEroadmap} sa spolieha na testovanie softvéru až po dokončení dizajnu, kódovania a splnenia podmienok. Agilný a iteratívny prístup tvorby softvéru predstavili prototypovanie, ktoré je použité na overenie požiadavok a verifikáciu minulej iterácie. Neustála verifikácia sa snaží využiť formálne metódy a inšpekcie počas procesu tvorby, na rozdiel od testovacej fázy na konci vývojovej fázy.
+\paragraph{}
+ V tabuľke je zobrazené rozloženie chýb na miesta, kde boli vytvorené, a kde boli nájdené. Z hodnôt môžeme vyčítať, že až 70\% chýb vzniklo pri zhromažďovaní požiadaviek, analýze a návrhu. Väčšina chýb sa však našla pri systémovom a integračnom testovaní.
+ Chyby môžu vzniknúť v každom štádiu vývoja aplikácie. \cite{testovanie}\\ Vodopádový spôsob vývoja softvéru sa spolieha na testovanie softvéru až po dokončení dizajnu, kódovania a splnenia podmienok. Agilný a iteratívny prístup tvorby softvéru predstavili prototypovanie, ktoré je použité na overenie požiadavok a verifikáciu minulej iterácie. Neustála verifikácia sa snaží využiť formálne metódy a inšpekcie počas procesu tvorby, na rozdiel od testovacej fázy na konci vývojovej fázy. \cite{CSEroadmap}
+ 
 \subsection{Umelá inteligencia}\label{AI}
-
- Pod umelou inteligenciou (AI) chápeme softvér, ktorý napodobňuje ľudské kognitívne funkcie tým, že má schopnosť učiť sa a riešiť problémy. Program sa správa tak, že ak by to robil človek, považovali by sme ho za inteligentného. Okrem rozpoznávania reči, obrazov, prekladu do jazykov dokáže imitovať rozmýšľanie ľudí - učiť sa, uvažovať, riešiť problémy, sám hľadať spôsoby, ako sa dostať k cieľu. Je to aj schopnosť počítačov používať algoritmus na učenie sa z dát a získané vedomosti použiť na rozhodovanie podobné ľudskému. Umelá inteligencia ako celok stavia vo veľkej miere na základoch mnohých ďalších vedných odborov, a to predovšetkým na informatike, matematike, štatistike, logike, lingvistike či neurovedách. Podobnosť umelej a ľudskej inteligencie je ale iba povrchná a nie je správne ich stotožňovať.\cite{AIvMed}
+\paragraph{}
+ Umelá inteligencia (AI) je inteligencia demonštrovaná strojmi, na rozdiel od prirodzenej inteligencie, ktorú prejavujú zvieratá vrátane ľudí. Je to softvér, ktorý napodobňuje ľudské kognitívne funkcie. Hovoríme, že má schopnosť učiť sa a riešiť problémy, hoci to je kritizované viacerými expertmi. Umelá inteligencia je inteligentná iba povrchovo. V skutočnosti jej podstatou sú matematické vzorce a citlivo nastavené parametre pre dosiahnutie správneho matematického výsledku. Úlohou programu je vykonávať činnosti a rozhodnutia, podobne ako človek.
+ Aplikácie AI zahŕňajú pokročilé webové vyhľadávače (napr. Google), rozpoznávanie obrázkov, systémy odporúčaní (používajú YouTube, Amazon a Netflix), porozumenie ľudskej reči (ako Siri a Alexa) a samojazdiace autá (napr. Tesla). Umelá inteligencia je postavená na poznatkoch z matematiky, informatiky, štatistiky, logiky, lingvistiky, či neurovedách. \cite{AIvMed}
 
 \section{Používanie AI pri tvorbe a testovaní SW} \label{pouzitie AI pri SW}
 
@@ -104,13 +106,16 @@ Za súčasných okolností, automatické testovanie softvéru nedokáže vyrieš
 \end{itemize}
 
 \subsection{Rola AI v testovaní softvéru} \label{rola ai v sw}
-
-Rôzne nástroje AI sa používajú na generovanie testovacích údajov , výskum vhodnosti údajov, optimalizáciu a analýzu pokrytia, ako aj správu testov. Na účely testovania softvéru sa použilo mnoho ďalších techník založených na AI \cite{6926420}.
-ABC (Artificial Bee Colony Optimization) \cite{7542311} je optimalizačný algoritmus založený na inteligentnom správaní sa včelieho roja pri hľadaní potravy. ABC algoritmus sa zameriava na miesta v kóde, kde je definovaná alebo použitá premenná, ktorá predstavuje zdroj potravy. V modeli sa kolónia skladá z troch skupín včiel: zamestnaných včiel, pozorovateľov a prieskumníkov. Predpokladá sa, že pre každý zdroj potravy existuje len jedna umelo zamestnaná včela. Zamestnané včely idú k svojmu zdroju potravy a tancujú na tejto ploche. Zamestnaná včela, ktorej zdroj potravy bol opustený, sa stane prieskumníkom a začne hľadať nový zdroj potravy. Pozorovatelia sledujú tance zamestnaných včiel a vyberajú si zdroje potravy v závislosti od tancov. Vybraný zdroj sa následne otestuje vygenerovanými vstupnými údajmi. Testovanie modelom ABC dosahuje v porovnaní s inými technikami takmer globálnu optimalizáciu s niekoľkými vykonanými testami.
+\paragraph{}
+Rôzne nástroje AI sa používajú na generovanie testovacích údajov , výskum vhodnosti údajov, optimalizáciu a analýzu pokrytia, ako aj správu testov. Na účely testovania softvéru sa použilo mnoho ďalších techník založených na AI. \cite{6926420}\\
+\paragraph{}
+ABC (Artificial Bee Colony Optimization) je optimalizačný algoritmus založený na inteligentnom správaní sa včelieho roja pri hľadaní potravy. ABC algoritmus sa zameriava na miesta v kóde, kde je definovaná alebo použitá premenná, ktorá predstavuje zdroj potravy. V modeli sa kolónia skladá z troch skupín včiel: zamestnaných včiel, pozorovateľov a prieskumníkov. Predpokladá sa, že pre každý zdroj potravy existuje len jedna umelo zamestnaná včela. Zamestnané včely idú k svojmu zdroju potravy a tancujú na tejto ploche. Zamestnaná včela, ktorej zdroj potravy bol opustený, sa stane prieskumníkom a začne hľadať nový zdroj potravy. Pozorovatelia sledujú tance zamestnaných včiel a vyberajú si zdroje potravy v závislosti od tancov. Vybraný zdroj sa následne otestuje vygenerovanými vstupnými údajmi. Testovanie modelom ABC dosahuje v porovnaní s inými technikami takmer globálnu optimalizáciu s niekoľkými vykonanými testami. \cite{7542311}
 
 \subsection{Rola AI v testovaní GUI} \label{rola ai v gui}
-
-Grafické používateľské rozhrania (GUI) sú jedným z najpotrebnejších prvkov v dnešnom vývoji softvéru. Priebeh testovania GUI aplikácie si vyžaduje obrovské úsilie kvôli zložitosti týchto aplikácií. GUI môže mať aj v malej aplikácii problém obrovského počtu stavov, pretože sa môže generovať príliš veľa testovacích prípadov. Testovanie zahŕňa vypracovanie súboru úloh, vykonanie týchto úloh a porovnanie skutočných výsledkov s očakávanými výsledkami. Technika zahŕňa detekciu reakcie aplikácie na udalosti myši a klávesnice, komponentov, ako sú tlačidlá, lišty ponúk, obrázky, lišty nástrojov, textové polia, reakcie na vstup používateľa atď. Testovanie GUI sa môže vykonávať manuálne aj automatizovane, pričom obe metódy majú svoje výhody a nevýhody \cite{6926420}. Techniky na automatizované testovanie zahŕňajú generovanie GUI na základe modelu, generovanie testov na základe modelu a automatizáciu generovania testovacích prípadov, aby bolo možné automaticky regenerovať testy pri každej zmene GUI, ktoré modelujú správanie používateľského rozhrania. Mnoho činností v testovaní GUI je potrebné automatizovať, aby boli dané postupy ekonomicky vhodné. V optimálnom prístupe sa použijú inteligentný vyhľadávací agenti (Intelligent Search Agent) (ISA) pre optimálne generovanie testovacej sekvencie a inteligentný agent na optimalizáciu testovacích prípadov (Intelligent Test Case Optimization Agent) (ITOA) pre optimálne generovanie testovacích prípadov.\cite{6926420}
+\paragraph{}
+Grafické používateľské rozhrania (GUI) sú jedným z najpotrebnejších prvkov v dnešnom vývoji softvéru. Priebeh testovania GUI aplikácie si vyžaduje obrovské úsilie kvôli zložitosti týchto aplikácií. GUI môže mať aj v malej aplikácii problém obrovského počtu stavov, pretože sa môže generovať príliš veľa testovacích prípadov. Testovanie zahŕňa vypracovanie súboru úloh, vykonanie týchto úloh a porovnanie skutočných výsledkov s očakávanými výsledkami. Technika zahŕňa detekciu reakcie aplikácie na udalosti myši a klávesnice, komponentov, ako sú tlačidlá, lišty ponúk, obrázky, lišty nástrojov, textové polia, reakcie na vstup používateľa atď. Testovanie GUI sa môže vykonávať manuálne aj automatizovane, pričom obe metódy majú svoje výhody a nevýhody.\cite{6926420} \\
+\paragraph{}
+Techniky na automatizované testovanie zahŕňajú generovanie GUI na základe modelu, generovanie testov na základe modelu a automatizáciu generovania testovacích prípadov, aby bolo možné automaticky regenerovať testy pri každej zmene GUI, ktoré modelujú správanie používateľského rozhrania. Mnoho činností v testovaní GUI je potrebné automatizovať, aby boli dané postupy ekonomicky vhodné. V optimálnom prístupe sa použijú inteligentný vyhľadávací agenti (Intelligent Search Agent) (ISA) pre optimálne generovanie testovacej sekvencie a inteligentný agent na optimalizáciu testovacích prípadov (Intelligent Test Case Optimization Agent) (ITOA) pre optimálne generovanie testovacích prípadov.\cite{6926420}
 
 \section{Reakcia na témy} \label{reakcie}
 \paragraph{Spoločenské súvislosti.}
@@ -128,5 +133,5 @@ Testovanie je prítomné v každej fáze tvorby softvéru, aj preto je veľmi n�
 
 % týmto sa generuje zoznam literatúry z obsahu súboru literatura.bib podľa toho, na čo sa v článku odkazujete
 \bibliography{literatura}
-\bibliographystyle{plain} 
+\bibliographystyle{unsrt} 
 \end{document}
